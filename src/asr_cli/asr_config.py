@@ -1,9 +1,6 @@
 import dataclasses
 from enum import Enum
 
-from asr_cli.asr.asr import ASR
-from asr_cli.asr.asr_wav2vec2_ctc import Wav2Vec2CTCASR
-
 class ASRArch(Enum):
     wav2vec2ctc = "wav2vec2ctc"
 
@@ -18,6 +15,9 @@ Wav2Vec2CTCConfig = ASRConfig(
     model_path="wav2vec2ctc.pt",
 )
 
-def get_asr(asr_arch: ASRArch) -> ASR:
-    if asr_arch == ASRArch.wav2vec2ctc:
-        return Wav2Vec2CTCASR()
+Wav2Vec2CTCRemoteConfig = ASRConfig(
+    processor_path="jonatasgrosman/wav2vec2-large-xlsr-53-russian",
+    model_path="jonatasgrosman/wav2vec2-large-xlsr-53-russian",
+)
+
+
