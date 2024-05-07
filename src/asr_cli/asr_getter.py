@@ -9,4 +9,3 @@ def get_asr(asr_arch: ASRArch, remote: bool = False) -> ASR:
         return Wav2Vec2CTCASR(config)
     else:
         raise ValueError(f"Unknown {asr_arch=}")
-    

@@ -1,8 +1,10 @@
 import dataclasses
 from enum import Enum
 
+
 class ASRArch(Enum):
     wav2vec2ctc = "wav2vec2ctc"
+
 
 @dataclasses.dataclass
 class ASRConfig:
@@ -19,5 +21,3 @@ Wav2Vec2CTCRemoteConfig = ASRConfig(
     processor_path="jonatasgrosman/wav2vec2-large-xlsr-53-russian",
     model_path="jonatasgrosman/wav2vec2-large-xlsr-53-russian",
 )
-
-

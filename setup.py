@@ -1,13 +1,14 @@
 from typing import List
 from setuptools import find_packages, setup
 
+
 def get_requires() -> List[str]:
     return [
         "torch==2.3.0",
         "torchaudio==2.3.0",
-        "numpy",
-        "transformers",
-        "librosa"
+        "numpy==1.26.4",
+        "transformers==4.40.2",
+        "webrtcvad==2.0.10",
     ]
 
 
