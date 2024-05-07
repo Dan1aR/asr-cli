@@ -6,7 +6,12 @@ Simple ASR CLI tool
 python3 -m pip install -e .
 ```
 
-## Run
+## Run manually
 ```
 python3 main.py --wav_path examples/resources/tts-example.wav
+```
+
+## Use as a CLI tool
+```
+asr-cli --wav_path examples/resources/tts-example.wav
 ```

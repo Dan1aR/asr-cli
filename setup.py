@@ -14,6 +14,9 @@ def get_requires() -> List[str]:
 
 setup(
     name="asr_cli",
+    entry_points = {
+        'console_scripts': ['asr-cli=asr_cli.main:main'],
+    },
     version="0.dev",
     description="Simple ASR CLI tool",
     package_dir={"": "src"},

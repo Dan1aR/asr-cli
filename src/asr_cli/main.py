@@ -1,4 +1,4 @@
-#! python3
+#!/usr/bin/env python3
 
 import warnings
 from argparse import ArgumentParser, Namespace
@@ -14,11 +14,11 @@ warnings.filterwarnings("ignore")
 
 def _get_args() -> Namespace:
     parser = ArgumentParser()
-    parser.add_argument("--wav_path", type=str, help="wav_path to process")
+    parser.add_argument("--wav_path", type=str, help="wav_path to process", required=True)
     return parser.parse_args()
 
 
-def main(wav_path: str):
+def cli_entrypoint(wav_path: str):
     asr_recognizer = get_asr(ASRArch.wav2vec2ctc, remote=False)
     vad_cutter = get_vad(VadArch.webrtc)
 
@@ -26,6 +26,10 @@ def main(wav_path: str):
     print(result)
 
 
-if __name__ == "__main__":
+def main():
     args = _get_args()
-    main(args.wav_path)
+    cli_entrypoint(args.wav_path)
+
+
+if __name__ == "__main__":
+    main()
