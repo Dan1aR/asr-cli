@@ -8,5 +8,5 @@ python3 -m pip install -e .
 
 ## Run
 ```
-python3 main.py --wav_path examples/resources/example.wav
+python3 main.py --wav_path examples/resources/tts-example.wav
 ```
