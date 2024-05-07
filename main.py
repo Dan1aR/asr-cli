@@ -19,7 +19,7 @@ def _get_args() -> Namespace:
 
 
 def main(wav_path: str):
-    asr_recognizer = get_asr(ASRArch.wav2vec2ctc, remote=True)
+    asr_recognizer = get_asr(ASRArch.wav2vec2ctc, remote=False)
     vad_cutter = get_vad(VadArch.webrtc)
 
     result = infer(wav_path, asr_recognizer, vad_cutter)

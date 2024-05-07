@@ -1,5 +1,8 @@
+import os
 import dataclasses
 from enum import Enum
+
+resources_path = os.path.join(os.path.dirname(__file__), "resources")
 
 
 class ASRArch(Enum):
@@ -13,8 +16,8 @@ class ASRConfig:
 
 
 Wav2Vec2CTCConfig = ASRConfig(
-    processor_path="wav2vec2ctc_processor.pt",
-    model_path="wav2vec2ctc.pt",
+    processor_path=os.path.join(resources_path, "wav2vec2ctc_processor.pt"),
+    model_path=os.path.join(resources_path, "wav2vec2ctc.pt"),
 )
 
 Wav2Vec2CTCRemoteConfig = ASRConfig(

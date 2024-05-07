@@ -21,4 +21,5 @@ setup(
     include_package_data=True,
     install_requires=get_requires(),
     python_requires=">=3.8",
+    zip_safe=False
 )
