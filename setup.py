@@ -4,6 +4,8 @@ from setuptools import find_packages, setup
 
 def get_requires() -> List[str]:
     return [
+        "soundfile==0.12.1",
+        "soxr==0.3.7",
         "torch==2.3.0",
         "torchaudio==2.3.0",
         "numpy==1.26.4",
