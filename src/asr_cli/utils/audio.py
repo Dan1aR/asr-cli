@@ -18,3 +18,13 @@ def read_audio(
         sr = sampling_rate
 
     return wav.squeeze(0), sr
+
+def save_audio(path: str, tensor: torch.Tensor, sampling_rate: int = 16_000):
+    torchaudio.save(
+        path,
+        tensor.unsqueeze(0),
+        sampling_rate,
+        bits_per_sample=16,
+        format="wav",
+        encoding="PCM_S"
+    )
