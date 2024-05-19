@@ -17,7 +17,7 @@ class ASRConfig:
     processor_path: Optional[str] = None
     config_path: Optional[str] = None
 
-
+# No Wav2Vec2 resources will be included in pypi resources
 Wav2Vec2CTCConfig = ASRConfig(
     processor_path=os.path.join(resources_path, "wav2vec2ctc_processor.pt"),
     model_path=os.path.join(resources_path, "wav2vec2ctc.pt"),

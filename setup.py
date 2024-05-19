@@ -35,7 +35,7 @@ setup(
     description="Simple ASR CLI tool",
     package_dir={"": "src"},
     packages=find_packages("str", include=["asr_cli", "asr_cli.*"]),
-    include_package_data=True,
+    include_package_data=False,
     install_requires=get_requires(),
     dependency_links=[
         'git+https://github.com/NVIDIA/NeMo.git@r1.21.0#egg=nemo_toolkit[all]'
