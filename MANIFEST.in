@@ -1,5 +1,0 @@
-include README.md
-recursive-include src/asr_cli/resources *
-recursive-exclude src/asr_cli/resources/gigaam_ctc *
-recursive-exclude src/asr_cli/resources/wav2vec2ctc_processor.pt *
-recursive-exclude src/asr_cli/resources/wav2vec2ctc.pt *

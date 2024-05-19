@@ -22,7 +22,9 @@ def get_requires() -> List[str]:
         "webdataset==0.2.86",
         "pyannote.audio==3.2.0",
         "editdistance==0.8.1",
-        "jiwer==3.0.4"
+        "jiwer==3.0.4",
+        "omegaconf",
+        "IPython"
     ]
 
 
@@ -35,7 +37,7 @@ setup(
     description="Simple ASR CLI tool",
     package_dir={"": "src"},
     packages=find_packages("str", include=["asr_cli", "asr_cli.*"]),
-    include_package_data=False,
+    include_package_data=True,
     install_requires=get_requires(),
     dependency_links=[
         'git+https://github.com/NVIDIA/NeMo.git@r1.21.0#egg=nemo_toolkit[all]'

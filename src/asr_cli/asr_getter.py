@@ -1,6 +1,6 @@
 import os
 import subprocess
-from omegaconf import DictConfig, OmegaConf
+from omegaconf import OmegaConf
 from asr_cli.asr.asr import ASR
 from asr_cli.asr.asr_gigaam_ctc import GigaAMCTCASR
 from asr_cli.asr.asr_wav2vec2_ctc import Wav2Vec2CTCASR

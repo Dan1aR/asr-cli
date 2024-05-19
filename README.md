@@ -5,12 +5,6 @@ Simple ASR CLI tool
 ```
 python3 -m pip install -e .
 ```
-
-## Install from [Test PyPI](https://test.pypi.org/project/asr-cli-dan1ar/0.0.2/)
-```
-python3 -m pip install -i https://test.pypi.org/simple/ asr-cli-dan1ar==0.0.2
-```
-
 ## Use as a CLI tool
 ```
 asr-cli --wav_path examples/resources/tts-example.wav
