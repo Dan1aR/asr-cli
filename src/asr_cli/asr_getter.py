@@ -21,12 +21,14 @@ def get_asr(asr_arch: ASRArch, remote: bool = False) -> ASR:
         return Wav2Vec2CTCASR(config)
     elif asr_arch == ASRArch.gigaam_ctc:
         if not os.path.exists(GigaAMCTCConfig.model_path):
+            os.makedirs(os.path.dirname(GigaAMCTCConfig.model_path), exist_ok=True)
             model_url = 'https://n-ws-q0bez.s3pd12.sbercloud.ru/b-ws-q0bez-jpv/GigaAM/ctc_model_weights.ckpt'
             download_resources(model_url, GigaAMCTCConfig.model_path)
         else:
             print(f"Model already exists at {GigaAMCTCConfig.model_path}")
 
         if not os.path.exists(GigaAMCTCConfig.config_path):
+            os.makedirs(os.path.dirname(GigaAMCTCConfig.config_path), exist_ok=True)
             config_url = 'https://n-ws-q0bez.s3pd12.sbercloud.ru/b-ws-q0bez-jpv/GigaAM/ctc_model_config.yaml'
             download_resources(config_url, GigaAMCTCConfig.config_path)
         else:

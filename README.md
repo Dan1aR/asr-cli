@@ -3,6 +3,7 @@ Simple ASR CLI tool
 
 ## Installation
 ```
+python3 -m pip install Cython
 python3 -m pip install -e .
 ```
 ## Use as a CLI tool
